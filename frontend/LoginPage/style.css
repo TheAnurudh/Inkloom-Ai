@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #7961e9;
+    --purple-dark: #6048d5;
+    --text: #171725;
+    --muted: #626274;
+    --border: #e2e2eb;
+    --lavender: #f0edff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: #ffffff;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+a {
+    color: var(--purple-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.login-page {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.brand-panel {
+    min-width: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 35px 48px;
+    background-color: #f0edff;
+    background-image: url("assests/Pastel SaaS Dashboard Waves.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-mark {
+    color: #7450ff;
+    font-size: 32px;
+}
+
+.brand-content {
+    margin-top: 0;
+    transform: none;
+}
+
+.feature-list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: -1px;
+    gap: 16px;
+    transform: none;
+}
+
+.brand-head {
+    font-size: clamp(30px, 3vw, 48px);
+    line-height: 1.15;
+   
+}
+
+
+.brand-description {
+   
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.feature-item h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #454558;
+    line-height: 1.5;
+}
+
+
+.login-panel {
+    min-width: 0;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 30px clamp(28px, 5vw, 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.request-access {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    color: #454558;
+    margin-bottom: 55px;
+}
+
+
+.login-heading {
+    margin-bottom: 28px;
+}
+
+.login-heading h2 {
+    font-size: clamp(28px, 2.5vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.login-heading p {
+    font-size: 17px;
+    color: var(--muted);
+}
+
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: var(--text);
+    font-size: 15px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.social-button:hover {
+    background-color: #faf9ff;
+    border-color: #c9c0f8;
+}
+
+.google-logo , .microsoft-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.divider::before , .divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background-color: var(--border);
+}
+
+.divider span {
+    display: flex;
+    align-items: center;
+}
+
+.divider em {
+    font-style: normal;
+}
+
+#loginForm {
+    width: 100%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-field label {
+    font-size: 15px;
+    color: #454558;
+    margin-bottom: 10px;
+}
+
+.input-wrap , .input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 54px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background-color: #ffffff;
+    padding: 0 15px;
+    gap: 12px;
+    transition: border-color 0.2s;
+}
+
+.input-wrap:focus-within , .input-wrapper:focus-within {
+    border-color: var(--purple);
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #85859a;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.input-wrap input , .input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.input-wrap input::placeholder , .input-wrapper input::placeholder {
+    color: #9292a5;
+}
+
+
+.lock-icon {
+    width: 20px;
+    height: 20px;
+    color: #85859a;
+    flex-shrink: 0;
+}
+
+
+
+#togglePassword {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #85859a;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+#togglePassword svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.field-error {
+    display: block;
+    color: #d93636;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+
+.forgot-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.remember-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 4px 0 22px;
+    font-size: 14px;
+    color: #454558;
+    cursor: pointer;
+}
+
+.remember-row input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--purple);
+    cursor: pointer;
+}
+
+.sign-in-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(100deg, #b9a5f8, #c5b4fa);
+    color: #171725;
+    font-size: 15px;
+    font-weight: 600;
+    transition: filter 0.2s;
+}
+
+.sign-in-button:hover {
+    filter: brightness(0.97);
+}
+
+.sign-in-button svg {
+    width: 19px;
+    height: 19px;
+}
+
+.form-message {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.access-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-top: 35px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: #f7f7fc;
+}
+
+.access-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e9e2ff;
+    color: var(--purple);
+    flex-shrink: 0;
+}
+
+.access-icon svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.access-text h2 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.access-text p {
+    color: #555568;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 900px) {
+    .login-page {
+        grid-template-columns: 42% 58%;
+    }
+
+    .brand-panel {
+        padding: 35px 25px;
+    }
+
+    .login-panel {
+        padding: 28px;
+    }
+
+    .request-access {
+        margin-bottom: 40px;
+    }
+
+    .brand-description {
+        font-size: 15px;
+    }
+
+    .feature-list {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-panel {
+        min-height: 420px;
+        padding: 40px 25px;
+        background-position: center;
+    }
+
+    .brand-head {
+        font-size: 34px;
+    }
+
+    .brand-description {
+        font-size: 15px;
+    }
+
+    .feature-list {
+        gap: 14px;
+    }
+
+    .login-panel {
+        min-height: auto;
+        padding: 30px 22px;
+    }
+
+    .request-access {
+        margin-bottom: 35px;
+    }
+
+    .login-heading h2 {
+        font-size: 30px;
+    }
+
+    .access-card {
+        padding: 17px;
+        gap: 13px;
+    }
+
+    .access-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
