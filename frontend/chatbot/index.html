@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+
+        <!--Navbar-->
+        <header class="navbar">
+            
+        <!-- Inkloom AI Logo -->
+       <div class="logo">
+  <svg class="logo-icon" viewBox="0 0 40 40"
+       xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <path d="M20 3 L24 14 L35 18 L24 22 L20 33 L16 22 L5 18 L16 14 Z"
+          fill="#8055F5"/>
+  </svg>
+  <span>Inkloom AI</span>
+</div>
+
+       <div class="profile">
+        <div class="avatar">A</div>
+        <div class="profile-info"><strong>Aarav Sharma</strong>
+            <p>Content Creator</p></div>
+
+       </div>
+        </header>
+
+        <!--main heading and buttons-->
+        <main class="main">
+            <section class="intro">
+                <h1>Let's review your content</h1>
+
+                <p>
+                    upload, paste or type your content. I'll check it against your brand guidelines,<br class="desktop-break">approved facts and assests, and suggest improvements.
+                </p>
+
+                <div class="actions">
+                    <button class="action-btn active" id="pasteBtn">
+                         <svg class="icon" viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="17" rx="2"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M9 4V2h6v2M9 10h6M9 14h6M9 18h4"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    Text
+                    </button>
+
+                    <button class="action-btn" id="uploadBtn">
+                         <svg class="icon" viewBox="0 0 24 24">
+      <path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"
+            fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Upload file
+                    </button>
+
+                    <button class="action-btn" id="imageBtn">
+                       <svg class="icon" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="m21 15-5-5L5 21"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    Add image  
+                    </button>
+
+                    <button class="action-btn" id="linkBtn">
+                         <svg class="icon" viewBox="0 0 24 24">
+      <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"
+            fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round"/>
+    </svg>
+    Add link
+                    </button>
+                </div>
+
+                <input type="file" id="fileInput" hidden>
+                <input type="file" id="imageInput" accept="image/*" hidden>
+            </section>
+
+            <!--chat area-->
+            <section class="chat-area"></section>
+        </main>
+
+        <!--message bar-->
+        <div class="chat-input-wrapper">
+            <form id="chatForm" class="chat-input">
+                <button type="button" class="attach-btn" id="attachBin" aria-label="Attach file">
+ <svg xmlns="http://www.w3.org/2000/svg"
+       width="22" height="22" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor"
+       stroke-width="1.8" stroke-linecap="round"
+       stroke-linejoin="round">
+    <path d="m21.4 11.1-8.5 8.5a5 5 0 0 1-7.1-7.1l9.2-9.2a3.5 3.5 0 0 1 5 5L10.8 17.5a2 2 0 0 1-2.8-2.8l8.5-8.5"/>
+  </svg>
+                </button>
+
+                <input type="text" id="messageInput" placeholder="Type a message or ask for changes..." autocomplete="off">
+
+                <button type="submit" class="send-btn" aria-label="send message">
+ <svg xmlns="http://www.w3.org/2000/svg"
+       width="22" height="22" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor"
+       stroke-width="2" stroke-linecap="round"
+       stroke-linejoin="round">
+    <path d="M12 19V5"/>
+    <path d="m5 12 7-7 7 7"/>
+  </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
