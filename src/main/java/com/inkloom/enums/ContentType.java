@@ -1,0 +1,2 @@
+package com.inkloom.enums;
+public enum ContentType { INSTAGRAM_CAPTION, PRODUCT_ADVERTISEMENT, VIDEO_SCRIPT, BANNER_DESIGN, BLOG_POST }

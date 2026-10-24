@@ -1,17 +1,15 @@
-# Environment variables
+# secrets - NEVER commit
+application-local.properties
 .env
-.env.*
-!.env.example
+*.pem
+*.key
 
-# Dependencies
-node_modules/
-
-# Build files
-dist/
-build/
-
-# Logs
+# build / IDE
+target/
+bin/
+.classpath
+.project
+.settings/
+.idea/
+*.iml
 *.log
-
-# IDE files
-.vscode/
