@@ -1,0 +1,15 @@
+# secrets - NEVER commit
+application-local.properties
+.env
+*.pem
+*.key
+
+# build / IDE
+target/
+bin/
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.log

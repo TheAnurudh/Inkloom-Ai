@@ -1,0 +1,8 @@
+target
+.git
+.env
+.settings
+.classpath
+.project
+# secrets must never be baked into the image
+src/main/resources/application-local.properties
